@@ -1,0 +1,72 @@
+# --> RebornOS Mirrorlist from 20220729-1 <-- #
+
+# RebornOS repo: repo.rebornos.org
+Server = https://repo.rebornos.org/RebornOS/
+
+# Mirror 1:
+Server = http://osdn.mirror.constant.com/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 2:
+Server = https://mirrors.ocf.berkeley.edu/osdn/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 3:
+Server = https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 4:
+Server = https://ftp.jaist.ac.jp/pub/sourceforge.jp/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 5:
+Server = http://ftp.halifax.rwth-aachen.de/osdn/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 6:
+Server = http://mirroronet.pl/pub/mirrors/sourceforge.jp/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 7:
+Server = https://ftp.acc.umu.se/mirror/osdn.net/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 8:
+Server = http://194.71.11.163/mirror/osdn.net/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 9:
+Server = http://mirror.math.princeton.edu/pub/osdn/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 10:
+Server = https://openbsd.c3sl.ufpr.br/osdn/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 11:
+Server = https://mirrors.dotsrc.org/osdn/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 12:
+Server = https://free.nchc.org.tw/osdn/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 13:
+Server = https://ftp.sunet.se/mirror/osdn.net/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 14:
+Server = http://pumath.dl.osdn.jp/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 15:
+Server = http://ftp.dk.xemacs.org/osdn/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 16:
+Server = http://ftp.openbsd.dk/osdn/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 17:
+Server = http://mirrors.gigenet.com/OSDN/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 18:
+Server = https://plug-mirror.rcac.purdue.edu/osdn/storage/g/r/re/rebornos/repo/RebornOS/
+
+# Mirror 19:
+Server = http://osdn.ip-connect.vn.ua/storage/g/r/re/rebornos/repo/RebornOS/
+
+
+
+# RebornOS mirror.clarkson.edu
+Server = https://mirror.clarkson.edu/RebornOS/RebornOS/
+
+
+
+# Sourceforge mirror with redirection
+Server = https://sourceforge.net/projects/rebornos/files/r/RebornOS/
+
