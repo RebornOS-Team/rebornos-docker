@@ -14,6 +14,6 @@ xhost +local:root \
         --interactive \
         --tty \
         --rm \
-        rebornos/rebornos:latest
+        rebornos:latest
 
 xhost -local:root
