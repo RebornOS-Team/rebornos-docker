@@ -1,6 +1,7 @@
 FROM archlinux:base-devel
 
 WORKDIR /home/rebornos-shared
+ENV LANG=C.UTF-8
 SHELL ["/bin/sh", "-c"]
 
 COPY etc/ /etc/

@@ -35,3 +35,10 @@ xhost -local:root
 ```
 Otherwise just run the above commands in the same order, without the `#!` line
 
+## DistroBox Image Creation 
+
+When creating an image through *distrobox-create*, add an extra argument: 
+```sh
+--pre-init-hooks "sh /usr/bin/init-rebornos-docker.sh"
+```
+
