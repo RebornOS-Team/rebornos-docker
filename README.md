@@ -29,7 +29,7 @@ xhost +local:root \
         --interactive \
         --tty \
         --rm \
-        rebornos/rebornos:latest
+        rebornos-shared:latest
 
 xhost -local:root
 ```
