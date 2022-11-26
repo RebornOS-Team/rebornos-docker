@@ -15,4 +15,4 @@ RUN pacman-key --init \
         /var/cache/pacman/pkg/ \
         /var/lib/pacman/sync/
 
-ENTRYPOINT /bin/bash
+CMD ["/usr/bin/init-rebornos-docker.sh"]
