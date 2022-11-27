@@ -1,0 +1,29 @@
+name: Build and publish docker image
+on:
+  schedule:
+    - cron: '0 0 1 * *'
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: login to docker hub
+        uses: docker/login-action@v1
+        with:
+          username: rebornos
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build and push to docker hub
+        run: |
+          docker build --tag rebornos/rebornos:latest-arm64 . --network=host --platform linux/arm64
+          docker push rebornos/rebornos:latest-arm64
+          docker manifest rm rebornos/rebornos:latest || true
+          docker manifest create \
+            rebornos/rebornos:latest \
+            --amend rebornos/rebornos:latest-amd64 \
+            --amend rebornos/rebornos:latest-arm64
+          docker manifest push rebornos/rebornos:latest
