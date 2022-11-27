@@ -2,7 +2,7 @@
 
 docker push rebornos/rebornos:latest-amd64
 
-docker manifest rm rebornos/rebornos:latest
+docker manifest rm rebornos/rebornos:latest || true
 
 docker manifest create \
     rebornos/rebornos:latest \
