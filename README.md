@@ -2,6 +2,8 @@
 
 A Docker Container for RebornOS x86_64
 
+The source for this docker image is at https://github.com/RebornOS-Developers/rebornos-docker 
+
 The docker image is uploaded at https://hub.docker.com/r/rebornos/rebornos
 
 The `build.sh`, `run.sh`, and `build_and_run.sh` scripts are self explanatory. They build an image and run the container using the local `Dockerfile`.
