@@ -18,7 +18,7 @@ jobs:
         run: sh build.sh 
       - id: save_image_step
         name: Save Docker Image
-        run: docker save --output rebornos-amd64.tar rebornos/rebornos:latest-amd64
+        run: docker save --output rebornos-docker-amd64.tar rebornos/rebornos:latest-amd64
       - id: upload_package_step
         name: Upload Package Artifact
         uses: actions/upload-artifact@v3
