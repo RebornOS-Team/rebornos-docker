@@ -7,7 +7,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 0 * * 3'
+    - cron: '36 5 * * 3'
 jobs:
   publish:
     name: Publish
