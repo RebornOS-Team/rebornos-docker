@@ -3,8 +3,8 @@
 ![Docker Pulls](https://img.shields.io/docker/pulls/rebornos/rebornos)
 ![GitHub](https://img.shields.io/github/license/rebornos-developers/rebornos-docker)
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/rebornos-developers/rebornos-docker)
-[![Release](https://github.com/RebornOS-Developers/rebornos-docker/actions/workflows/publish.yml/badge.svg)](https://github.com/RebornOS-Developers/rebornos-docker/actions/workflows/publish.yml)
-[![Publish](https://github.com/RebornOS-Developers/rebornos-docker/actions/workflows/release.yml/badge.svg)](https://github.com/RebornOS-Developers/rebornos-docker/actions/workflows/release.yml)
+[![Release](https://github.com/RebornOS-Developers/rebornos-docker/actions/workflows/release.yml/badge.svg)](https://github.com/RebornOS-Developers/rebornos-docker/actions/workflows/release.yml)
+[![Publish](https://github.com/RebornOS-Developers/rebornos-docker/actions/workflows/publish.yml/badge.svg)](https://github.com/RebornOS-Developers/rebornos-docker/actions/workflows/publish.yml)
 
 A Docker Container for RebornOS x86_64
 
