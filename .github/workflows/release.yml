@@ -59,4 +59,4 @@ jobs:
           tag_name: ${{ env.GIT_VERSION }}
           name: ${{ env.GIT_VERSION }}
           files: |
-            ${{ steps.download_package_step.outputs.download-path }}/rebornos*.tar
+            ${{ steps.download_package_step.outputs.download-path }}/rebornos*.tar*
