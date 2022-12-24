@@ -3,9 +3,6 @@ run-name: Publication triggered by ${{ github.actor }}
 on:
   workflow_dispatch:
   workflow_call:
-  push:
-    branches:
-      - main
   schedule:
     - cron: '0 0 * * 3'
 jobs:
