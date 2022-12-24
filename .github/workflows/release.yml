@@ -37,7 +37,7 @@ jobs:
       - id: set_git_version
         name: Determine Git Version
         run: |
-          GIT_VERSION="$(git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' || printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)")"
+          GIT_VERSION="$(printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)")"
           echo "GIT_VERSION=$GIT_VERSION" >> $GITHUB_ENV 
       - id: download_package_step 
         name: Download Package Artifact
@@ -48,7 +48,7 @@ jobs:
         name: Generate CheckSum
         run: find ${{ steps.download_package_step.outputs.download-path }} -type f -exec sh -c 'md5sum $0 > $0.md5sum' {} \;
       - id: create_release_step
-        name: Create Pre-Release        
+        name: Create Release        
         uses: softprops/action-gh-release@v1
         with:          
           draft: false
