@@ -1,0 +1,66 @@
+name: Release
+run-name: Release triggered by ${{ github.actor }}
+on:
+  workflow_dispatch:
+  workflow_call:
+  schedule:
+    - cron: '0 0 * * 2'  
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    container: 
+      image: rebornos/rebornos:latest
+      ports:
+        - 80
+    steps:
+      - id: checkout_repository_step
+        name: Checkout Git Repository
+        uses: actions/checkout@v3
+      - id: build_image_step
+        name: Build Docker Image
+        run: sh build.sh 
+      - id: save_image_step
+        name: Save Docker Image
+        run: docker save --output rebornos-amd64.tar rebornos/rebornos:latest-amd64
+      - id: upload_package_step
+        name: Upload Package Artifact
+        uses: actions/upload-artifact@v3
+        with: 
+          name: RebornOS Latest Image
+          path: rebornos*.tar
+          if-no-files-found: error
+  release:  
+    needs: build        
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - id: checkout_repository_step
+        name: Checkout Git Repository
+        uses: actions/checkout@v3
+      - id: set_git_version
+        name: Determine Git Version
+        run: |
+          GIT_VERSION="$(git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' || printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)")"
+          echo "GIT_VERSION=$GIT_VERSION" >> $GITHUB_ENV 
+      - id: download_package_step 
+        name: Download Package Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: RebornOS Latest Image
+      - id: generate_checksum_step
+        name: Generate CheckSum
+        run: find ${{ steps.download_package_step.outputs.download-path }} -type f -exec sh -c 'md5sum $0 > $0.md5sum' {} \;
+      - id: create_release_step
+        name: Create Pre-Release        
+        uses: softprops/action-gh-release@v1
+        with:          
+          draft: false
+          prerelease: false
+          fail_on_unmatched_files: true
+          generate_release_notes: true
+          append_body: false
+          tag_name: ${{ env.GIT_VERSION }}
+          name: ${{ env.GIT_VERSION }}
+          files: |
+            ${{ steps.download_package_step.outputs.download-path }}/rebornos*.tar
