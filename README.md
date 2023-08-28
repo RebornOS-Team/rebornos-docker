@@ -1,7 +1,7 @@
 # RebornOS-Docker
 
-![Docker Pulls](https://img.shields.io/docker/pulls/rebornos/rebornos)
-![GitHub](https://img.shields.io/github/license/rebornos-developers/rebornos-docker)
+[![Docker Pulls](https://img.shields.io/docker/pulls/rebornos/rebornos)](https://hub.docker.com/r/rebornos/rebornos)
+[![GitHub](https://img.shields.io/github/license/rebornos-developers/rebornos-docker)](LICENSE)
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/rebornos-developers/rebornos-docker)
 [![Release](https://github.com/RebornOS-Developers/rebornos-docker/actions/workflows/release.yml/badge.svg)](https://github.com/RebornOS-Developers/rebornos-docker/actions/workflows/release.yml)
 [![Publish](https://github.com/RebornOS-Developers/rebornos-docker/actions/workflows/publish.yml/badge.svg)](https://github.com/RebornOS-Developers/rebornos-docker/actions/workflows/publish.yml)
