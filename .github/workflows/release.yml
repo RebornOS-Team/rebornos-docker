@@ -38,7 +38,7 @@ jobs:
         name: Determine Version
         run: |
           GIT_VERSION="$(printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)")"
-          VERSION="$GIT_VERSION.$(date -Is | tr :- _)"
+          VERSION="$GIT_VERSION.$(date -Is | tr :-+; _)"
           echo "VERSION=$VERSION" >> $GITHUB_ENV 
       - id: download_package_step 
         name: Download Package Artifact
